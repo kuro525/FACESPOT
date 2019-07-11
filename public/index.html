@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -7,15 +7,15 @@
 <body>
 <main>
     <div class="photo">
-        <label>
-            <input type="file" class="file" accept='image/*'>
-            <img src="https://firebasestorage.googleapis.com/v0/b/facespot-b3ab6.appspot.com/o/default_img.svg?alt=media&token=8bf92214-6896-465f-97ce-125b5902691d"
-                 class="img-view" alt="選択画像表示">
+        <input type="file" id="input-file" class="file" accept='image/*'>
+        <label for="input-file">
+            <div class="canvas-container">
+                <canvas class="canvas"></canvas>
+            </div>
             <div class="line1"></div>
             <div class="line2"></div>
         </label>
     </div>
-
     <p class="output-message">画像ファイルを選択してください...</p>
     <button class="start-button">START</button>
 </main>
