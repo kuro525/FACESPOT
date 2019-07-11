@@ -18,6 +18,8 @@ document.querySelector('.start-button')
         const canvas = document.querySelector('.canvas');
         const blob = await makeBlob(canvas);
         outputMessage.textContent = '解析中。'
+        document.querySelector('.start').classList.add('none')
+
 
         const url = 'https://asia-northeast1-facespot-b3ab6.cloudfunctions.net/fetchFaceInfo'
         const header = {headers: {'Content-Type': 'application/octet-stream',}}
