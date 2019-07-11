@@ -41,6 +41,36 @@ main {
       }
     }
   }
+
+
+  .start {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+
+    .start-button {
+      display: inline-block;
+      text-align: center;
+      width: 150px;
+      height: 150px;
+      border-radius: 75px;
+      font-size: 40px;
+      color: #fff;
+      border: 3px solid #fff;
+      outline: none;
+      transition: background-color 0.2s ease-out,
+      border-color 0.2s ease-out;
+      cursor: pointer;
+      background-color: #E56A69;
+
+      &:hover, &:active {
+        background-color: rgba(229, 106, 105, 0.5);
+        transition: background-color 0.3s ease-in,
+        border-color 0.3s ease-in;
+      }
+    }
+  }
 }
 
 .none {
