@@ -8,6 +8,7 @@ import './css/lineAnimation.scss'
 import './js/inputImgPreview'
 import './js/lineAnimation'
 import canvasLine from "./js/canvasLine";
+import faceInformation from './js/faceInformation'
 
 const outputMessage = document.querySelector('.output-message')
 
@@ -17,6 +18,8 @@ document.querySelector('.start-button')
         const canvas = document.querySelector('.canvas');
         const blob = await makeBlob(canvas);
         outputMessage.textContent = '解析中。'
+        document.querySelector('.start').classList.add('none')
+
 
         const url = 'https://asia-northeast1-facespot-b3ab6.cloudfunctions.net/fetchFaceInfo'
         const header = {headers: {'Content-Type': 'application/octet-stream',}}
@@ -38,17 +41,18 @@ const makeBlob = (canvas) => {
 
 const faceApiSuccess = (data) => {
     console.log(data)
-    if (data.length == 0) {
+    const personCount: number = data.length
+
+    if (personCount == 0) {
         outputMessage.textContent = '検出できませんでした。'
         return
     }
-    const personCount = data.length
 
-    console.log(`人数=${personCount}`)
+    faceInformation(data)
 
     data.forEach(person => {
+        console.log(person);
         canvasLine(person.faceRectangle)
-
     })
 }
 

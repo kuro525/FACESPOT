@@ -41,6 +41,7 @@ document.querySelector('.file')
 
         reader.addEventListener('load', () => {
             preview(reader.result)
+            document.querySelector('.start').classList.remove('none')
         })
     });
 
