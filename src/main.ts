@@ -48,6 +48,7 @@ const faceApiSuccess = (data) => {
         return
     }
 
+    document.querySelector('.spot-button').classList.remove('none')
     faceInformation(data)
 
     data.forEach(person => {

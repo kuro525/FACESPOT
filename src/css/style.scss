@@ -48,28 +48,6 @@ main {
     bottom: 20px;
     width: 100%;
     text-align: center;
-
-    .start-button {
-      display: inline-block;
-      text-align: center;
-      width: 150px;
-      height: 150px;
-      border-radius: 75px;
-      font-size: 40px;
-      color: #fff;
-      border: 3px solid #fff;
-      outline: none;
-      transition: background-color 0.2s ease-out,
-      border-color 0.2s ease-out;
-      cursor: pointer;
-      background-color: #E56A69;
-
-      &:hover, &:active {
-        background-color: rgba(229, 106, 105, 0.5);
-        transition: background-color 0.3s ease-in,
-        border-color 0.3s ease-in;
-      }
-    }
   }
 }
 
@@ -113,6 +91,90 @@ main {
 }
 
 
+.spot-button {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+
+  .recommend-button {
+    font-size: 22px;
+  }
+
+  .Arrow {
+    margin: 0 0 0 -10px;
+    position: absolute;
+    left: 50%;
+    -webkit-animation: arrow 0.5s 1s infinite ease-out alternate;
+
+    .left, .right {
+      position: absolute;
+      height: 3px;
+      width: 40px;
+      background: #fff;
+      bottom: 10px;
+      border-radius: 4px;
+      -webkit-transform-origin: 5px 50%;
+      opacity: 0.8;
+    }
+
+    .left {
+      -webkit-transform: rotate(240deg);
+      left: 3px;
+      -webkit-animation: leftArrow 0.5s 1s infinite ease-out alternate;
+    }
+
+    .right {
+      -webkit-transform: rotate(-60deg);
+      left: 8px;
+      -webkit-animation: rightArrow 0.5s 1s infinite ease-out alternate;
+    }
+
+    @-webkit-keyframes arrow {
+      0% {
+        bottom: 0;
+      }
+      100% {
+        bottom: 30px;
+      }
+    }
+
+    @-webkit-keyframes leftArrow {
+      100% {
+        -webkit-transform: rotate(225deg);
+      }
+    }
+
+    @-webkit-keyframes rightArrow {
+      100% {
+        -webkit-transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+
+.button {
+  display: inline-block;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  font-size: 40px;
+  color: #fff;
+  border: 3px solid #fff;
+  outline: none;
+  transition: background-color 0.2s ease-out,
+  border-color 0.2s ease-out;
+  cursor: pointer;
+  background-color: #E56A69;
+
+  &:hover, &:active {
+    background-color: rgba(229, 106, 105, 0.5);
+    transition: background-color 0.3s ease-in,
+    border-color 0.3s ease-in;
+  }
+}
 
 
 
