@@ -1,39 +1,79 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>Title</title>
-</head>
-<body>
-<main>
-    <div class="information">
+  </head>
+  <body>
+    <main>
+      <div class="information ">
         <p class="outputPeople"></p>
         <p class="outputGender"></p>
         <p class="outputAge"></p>
-    </div>
-    <div class="photo">
-        <input type="file" id="input-file" class="file" accept='image/*'>
-        <label for="input-file">
+      </div>
+      <div class="photo-graph">
+        <div class="photo">
+          <input type="file" id="input-file" class="file" accept='image/*'>
+          <label for="input-file">
             <div class="canvas-container">
-                <canvas class="canvas"></canvas>
+              <canvas class="canvas"></canvas>
             </div>
             <div class="line1"></div>
             <div class="line2"></div>
-        </label>
-    </div>
-    <p class="output-message">画像ファイルを選択してください...</p>
-    <div class="start none">
-        <button class="button start-button">START</button>
-    </div>
-
-    <div class="spot-button none">
-        <button class="button recommend-button">おすすめSpot</button>
-        <div class="Arrow">
-            <div class="left"></div>
-            <div class="right"></div>
+          </label>
         </div>
-    </div>
-</main>
-<script src="./main.js"></script>
-</body>
+
+
+        <div class="graph">
+          <canvas class="chart"></canvas>
+          <div class="graphText">
+            <ul>
+              <li class="happiness">喜び</li>
+              <li class="surprise">驚き</li>
+              <li class="anger">怒り</li>
+              <li class="fear">恐れ</li>
+              <li class="sadness">悲しみ</li>
+              <li class="disgust">ムカつき</li>
+              <li class="contempt">軽蔑</li>
+              <li class="neutral">無表情</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <p class="output-message">画像ファイルを選択してください...</p>
+      <div class="start none">
+        <button class="button start-button">START</button>
+      </div>
+      <div class="spot-button none">
+        <a class="button recommend-button" href="#recommended">おすすめSpot</a>
+        <div class="Arrow">
+          <div class="left"></div>
+          <div class="right"></div>
+        </div>
+      </div>
+
+      <div class="spot none" id="recommended">
+        <div class="spot-line"></div>
+        <h2>あなたのへおすすめ</h2>
+        <img src="https://blog-001.west.edge.storage-yahoo.jp/res/blog-fc-e9/oto33toshi33/folder/492289/47/38234547/img_0?1240109765"
+             id="spotPhoto" alt="おすすめ画像">
+        <p class="name">AAAAA</p>
+        <a href="./index.html" class="top">PAGE TOP</a>
+      </div>
+
+
+
+
+
+<!--      <div class="photo">-->
+<!--        <video ref="video" id="video" class="video" playsinline muted autoplay></video>-->
+<!--        <canvas ref="canvas" id="emo_canvas" width="1000" height="750"></canvas>-->
+<!--      </div>-->
+<!--      <button >takePicture</button>-->
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
 </html>
