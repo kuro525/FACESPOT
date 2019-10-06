@@ -12,7 +12,8 @@ const faceInformation = (data) => {
 
         if (gender === 'female') {
             womanSum++
-        } else if (gender === 'male') {
+        }
+        if (gender === 'male') {
             manSum++
         }
     })
@@ -40,9 +41,6 @@ const faceInformation = (data) => {
         outputAge.textContent = `平均年齢 ${(ageSum / personCount).toFixed(1)}歳`
     }
 
-    console.log(ageSum)
-    console.log(womanSum)
-    console.log(manSum);
 }
 
 export default faceInformation

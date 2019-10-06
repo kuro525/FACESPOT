@@ -7,8 +7,6 @@ export const canvasLine = (Rectangle) => {
     context.lineWidth = 2 / scale
     const {top, left, width, height} = Rectangle
     context.strokeRect(left / scale, (top - marginTop) / scale, width / scale, height / scale)
-    // console.log(Rectangle)
-    // console.log(scale);
 }
 
 export default canvasLine
